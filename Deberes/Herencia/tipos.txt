@@ -1,0 +1,8 @@
+1,Acción,
+2,Disparos,
+3,Estrategia,
+4,Simulación,
+5,Deportes,
+6,Carreras,
+7,Aventura,
+8,Rol,
