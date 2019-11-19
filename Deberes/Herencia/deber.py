@@ -56,7 +56,7 @@ def menuCrearRegistro():
         clasificacion = input('Ingrese la clasificacion del videojuego: ')
         desarrollador = input('Ingrese el desarrollador del videojuego: ')
         juego = Videojuego(text,lista_tipos[int(text)-1][1],len(lista_juegos)+1,name,clasificacion,desarrollador)
-        juego.crearRegistro(text)
+        escribirArchivo()
         lista_juegos.append((juego))
         print("\nRegistro Ingresado")
         
@@ -79,8 +79,7 @@ def escribirArchivo():
         archivo_escritura_abierto = open(path, mode="w")
             #text = str(self.__IDT+","+self.__nombre+","+self.__clasificacion+","+self.__desarrollador)
         for juego in lista_juegos:
-            text += str(juego.lineaAImprimir())
-        archivo_escritura_abierto.write(text)
+            archivo_escritura_abierto.write(str(juego.lineaAImprimir()))
         archivo_escritura_abierto.close()
 
 def imprimirInventario():
@@ -124,6 +123,8 @@ class TipoDeJuego:
         self.__genero = genero
     def __str__(self):
         return  f"IDT: {self.__IDT}\n" + f"Genero: {self.__genero}\n"
+    def getIDT(self):
+        return self.__IDT
 
         
 class Videojuego(TipoDeJuego):
@@ -158,17 +159,8 @@ class Videojuego(TipoDeJuego):
                     
         
     def lineaAImprimir(self):
-        return f"\n{self.__IDV},"+IDT+f",{self.__nombre},{self.__clasificacion},{self.__desarrollador}"
+        return f"{self.__IDV},"+self.getIDT()+f",{self.__nombre},{self.__clasificacion},{self.__desarrollador}"
     
-    def crearRegistro(self,IDT):
-        try:
-            path = './juegos.txt'
-            archivo_escritura_abierto = open(path, mode="a")
-            text = self.lineaAImprimir()
-            archivo_escritura_abierto.writelines([text])
-            archivo_escritura_abierto.close()
-        except Exception as error:
-            print("Error")
             
     def __str__(self):
         return super().__str__() + f"IDV: {self.__IDV}\n" + f"Nombre: {self.__nombre}\n" + f"Clasificacion: {self.__clasificacion}\n" + f"Desarrollador: {self.__desarrollador}\n"

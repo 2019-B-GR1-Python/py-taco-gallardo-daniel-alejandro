@@ -1,6 +1,5 @@
-
-1,4,Watchdogs 2,15,Ubisoft
-
-2,4,Overwatch 2,13,Blizzard Entertainment
-
-3,4,Call Of Dutty Mobile,15,Activision
+1,2,Nombre,18,Desarrollador
+22,4,Pokemon,10,Nintendo
+3,3,WatchDogs,15,Ubisoft
+4,6,RoadFighter,10,Konami
+5,1,Nombre,b,v
