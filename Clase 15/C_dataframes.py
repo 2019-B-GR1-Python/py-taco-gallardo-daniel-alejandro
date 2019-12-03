@@ -32,3 +32,4 @@ datos_fisicos2 = pd.DataFrame(
 #Setear filas y columnas despues de crea el Dataframe
 df1.index = ['Daniel','Alejandro']
 df1.columns =['A','B','C','D','E']
+
