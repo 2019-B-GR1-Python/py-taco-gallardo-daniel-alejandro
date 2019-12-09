@@ -53,7 +53,7 @@ s_mas = serie_valor_ciudad * 1.1
 
 serie_valor_ciudad["Quito"] = serie_valor_ciudad["Quito"] - 50
 
-"Loja" in serie_valor_ciudad
+print("Loja" in serie_valor_ciudad)
 
 print("Lima" in serie_valor_ciudad)
 print("Loja" in serie_valor_ciudad)
@@ -77,8 +77,7 @@ print(ciudades_dos + ciudades_uno)
 #Repetir indices
 ciudad_add = ciudades_uno.add(ciudades_dos)
 #No repetir indices
-ciu_concatenadas_v = pd.concat([ciudades_uno,
-                              ciudades_dos], verify_integrity = True)
+ciu_concatenadas_v = pd.concat([ciudades_uno,ciudades_dos], verify_integrity = True)
 
 ciu_append = ciudades_uno.append(ciudades_dos,verify_integrity = True)
 
